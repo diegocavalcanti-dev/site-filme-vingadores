@@ -1,0 +1,49 @@
+.hero {
+    padding: 5.6vw;
+    height: 100vh;
+    background-image: url(../images/hero1.jpeg);
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    margin-top: -80px;
+
+    @media (max-width: 768px) {
+        padding: 10vw; 
+        height: auto; 
+        background-image: url(../images/hero1.jpeg); 
+        margin-top: 0;
+    }
+
+    .button {
+        margin-top: 2vw;
+        margin-bottom: 8px;
+    }
+
+    &__content {
+        max-width: 640px;
+        margin: 0 auto;
+        padding-top: 30vh; 
+
+        &__branding {
+            max-width: 320px;
+            margin: 0 auto 38px;
+
+            @media (max-width: 768px) {
+                max-width: 180px;
+            }
+        }
+
+        .title--small {
+            margin-bottom: 64px;
+            font-size: 24px;
+        }
+
+        p {
+            margin-bottom: 20px;
+
+            &:last-child {
+                margin-top: 60px;
+            }
+        }
+    }
+}

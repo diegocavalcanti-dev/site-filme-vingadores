@@ -1,0 +1,34 @@
+@use 'variaveis';
+
+.best-stories {
+    padding: 50px 0 0 0;
+    margin-bottom: -55px;
+    background-color: variaveis.$corDeFundo;
+
+    @media (max-width: 768px) {
+        padding: 10vw 0 0 0;
+    }
+
+    &__content {
+        max-width: 1000px;
+        margin: 0 auto;
+
+        @media (max-width: 768px) {
+            padding: 0 12px 0 20px;
+        }
+    }
+
+    .title--small {
+        font-size: 50px;
+        font-weight: bold;
+        color: variaveis.$corTextoSecundario;
+        margin-bottom: 4vw;
+    }
+
+    p {
+        color: variaveis.$corTextoPrincipal;
+        font-size: 22px;
+        line-height: 1.6;
+        margin-bottom: 40px;
+    }
+}
