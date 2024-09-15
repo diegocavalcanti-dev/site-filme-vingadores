@@ -23,6 +23,10 @@
         font-weight: bold;
         color: variaveis.$corTextoSecundario;
         margin-bottom: 4vw;
+
+        @media (max-width: 768px) {
+            line-height: 58px;
+        }
     }
 
     p {
@@ -30,5 +34,6 @@
         font-size: 22px;
         line-height: 1.6;
         margin-bottom: 40px;
+        
     }
 }

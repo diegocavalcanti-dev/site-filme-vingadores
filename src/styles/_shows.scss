@@ -8,11 +8,15 @@
     &__list {
         margin-top: 44px;
         display: none;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Ajuste para desktop */
         gap: 24px;
+        justify-content: center; /* Centraliza o conteúdo da grid */
+        width: 100%;
+        max-width: 1000px; /* Define um max-width para evitar que a grid se estenda demais */
+        margin: 0 auto; /* Centraliza a grid horizontalmente no contêiner pai */
 
         @media (max-width: 768px) {
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Ajuste para telas menores */
         }
 
         &--is-active {
@@ -20,13 +24,17 @@
         }
 
         &__item {
-            width: 473px;
-            height: 283px;
+            max-width: 100%;
+            aspect-ratio: 630 / 378; /* Mantém a proporção da imagem */
             overflow: hidden;
             position: relative;
 
+            @media (max-width: 768px) {
+                display: block;
+            }
+
             img {
-                position: absolute; 
+                position: absolute;
                 top: 0;
                 left: 0;
                 width: 100%;
@@ -49,12 +57,12 @@
 
         &__button {
             color: variaveis.$corTextoSecundario;
-            font-size: 20px;
+            font-size: 2vw;
             border: none;
             padding-bottom: 5px;
             background: none;
             text-transform: uppercase;
-            margin: 0 1vw;
+            margin: 0 1vw 3vw;
             cursor: pointer;
             border-bottom: 5px solid transparent;
 
